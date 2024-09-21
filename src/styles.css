@@ -31,13 +31,8 @@ body {
 }
 
 button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
   cursor: pointer;
   text-align: left;
-  color: inherit;
 }
 
 .wrapper {
@@ -107,6 +102,23 @@ h1 {
   font-size: 2rem;
 }
 
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: flex;
+}
+
+.keyboard-item {
+  border: none;
+  margin: 2px;
+  border-radius: 4px;
+  width: 45px;
+}
+
 /*
   Round the corners for the 4 cells at the very corners of
   the game board
@@ -174,6 +186,13 @@ h1 {
   animation: slideUp 750ms cubic-bezier(0, 0.72, 0.24, 1.02);
   border-radius: 4px 4px 0px 0px;
   will-change: transform;
+  top: 50%;
+  z-index: 1;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .happy.banner {
